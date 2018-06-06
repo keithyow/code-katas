@@ -1,11 +1,12 @@
 def KaprekarsConstant(num)
 
   # code goes here
-  count = 1
+  count = 0
   current = num.to_s
   done = false
 
   while done != true
+    count += 1    
     if current.length == 4
       big = current.split('').sort.reverse.join
       small = current.split('').sort.join
@@ -15,7 +16,6 @@ def KaprekarsConstant(num)
           return count
       else
           current = result.to_s
-          count += 1
       end
     else
       current = current + '0'
